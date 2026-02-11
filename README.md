@@ -1,0 +1,1 @@
+# magzine_kindof_portfolio
