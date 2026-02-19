@@ -4,28 +4,51 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: #f4f1eb;
   color: #111;
 }
 
+
 section {
   padding: 80px 8%;
 }
+
 
 h1, h2 {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+.hero-cover {
+  background: #111;
+  
+  color: #fff;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+}
 
 .hero {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 120px 0;
+  width: 100%;
+  min-height: 60vh; /* NOT 100vh */
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
 }
+
 
 .hero h1 {
   font-size: 6rem;
@@ -111,7 +134,10 @@ h1, h2 {
   height: 520px;
   object-fit: cover;
 }
-
+.exp-img {
+  height: 520px;
+  object-fit: cover;
+}
 
 .card {
   background: #fff;
@@ -487,6 +513,8 @@ progress {
   line-height: 0.95;
   margin-top: 20px;
 }
+
+
 /* ===== HOBBIES EDITORIAL ===== */
 
 .hobbies-editorial {
@@ -824,7 +852,7 @@ body {
 
 /* TEXT */
 .cover-text h1 {
-  font-size: clamp(7rem, 14vw, 11rem);
+  font-size: clamp(3rem, 10vw, 8rem);
   font-weight: 900;
   letter-spacing: 6px;
   line-height: 0.9;
@@ -1052,4 +1080,261 @@ body {
 
 .dropdown.active .dropdown-header::after {
   content: "–";
+}
+
+/* ===== ACHIEVEMENTS CLEAN SPACING FIX ===== */
+
+.communication {
+  padding: 120px 8%;
+}
+
+.communication div {
+  max-width: 600px;
+}
+
+.communication h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.communication p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+/* Improve grid alignment */
+.communication.grid {
+  align-items: center;
+  gap: 80px;
+}
+
+/* Image spacing */
+.communication img {
+  height: 420px;
+  object-fit: cover;
+}
+/* ============================= */
+/* ===== MOBILE RESPONSIVE ===== */
+/* ============================= */
+
+
+@media (max-width: 768px) {
+
+  
+  .hero {
+    min-height: 40vh;
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .contents-section {
+    padding: 40px 20px;
+  }
+
+  section {
+    padding: 60px 6%;
+  }
+
+  /* Make ALL grids single column */
+  .grid,
+  .cover-grid,
+  .about-grid,
+  .projects-grid,
+  .hobbies-grid,
+  .job-grid,
+  .certificates-section {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  /* Hero title smaller */
+  .cover-text h1 {
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+  }
+
+  .cover-meta .resume {
+    font-size: 1.6rem;
+  }
+
+  /* Contents fix */
+  .contents-list {
+    columns: 1;
+  }
+
+  .contents-left h2 {
+    font-size: 2rem;
+  }
+
+  .contents-list li {
+    font-size: 1rem;
+  }
+
+  /* Education timeline vertical */
+  .exp-timeline {
+    flex-direction: column;
+  }
+
+  .exp-card {
+    width: 100%;
+  }
+
+  /* Projects scroll remove fixed height */
+  /* ===== PROJECTS MOBILE SWIPE ===== */
+
+.projects-left {
+  position: relative;
+  top: auto;
+}
+
+.projects-right {
+  display: flex;
+  overflow-x: auto;
+  gap: 18px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.project-card {
+  min-width: 85%;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.projects-right::-webkit-scrollbar {
+  display: none;
+}
+
+
+  /* Big titles smaller */
+  .projects-title,
+  .about-title,
+  .tech-title,
+  .job-title {
+    font-size: 2.5rem;
+  }
+
+  /* Image heights auto */
+  .about-image,
+  .job-image,
+  .tech-image,
+  .cert-left img {
+    height: auto;
+  }
+  .exp-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .exp-intro {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .exp-timeline {
+    gap: 18px;
+  }
+
+  .exp-card {
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .exp-card h4 {
+    font-size: 1rem;
+  }
+
+  .exp-tag {
+    font-size: 0.65rem;
+  }
+   .cert-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .cert-header {
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .cert-content {
+    font-size: 0.85rem;
+  }
+
+  .cert-dropdown {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  .communication h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .communication p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .communication.grid {
+    gap: 40px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  
+
+  .project-card {
+    min-width: 85%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .projects-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  section {
+    scroll-snap-align: start;
+  }
+
+  /* Full screen sections */
+  section:not(.hero-cover):not(.contents):not(#internships):not(#contact) {
+    min-height: 100svh;
+  }
+
+  /* Hero + Contents split */
+  .hero-cover {
+    min-height: 50svh;
+  }
+
+  .contents {
+    min-height: 50svh;
+  }
+
+  /* Internship + Contact split */
+  #internships {
+    min-height: 50svh;
+  }
+
+  #contact {
+    min-height: 50svh;
+  }
+
 }
