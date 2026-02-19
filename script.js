@@ -14,8 +14,8 @@ reveal();
 
 document.querySelectorAll(".contents-list li").forEach(item => {
   item.addEventListener("click", () => {
-    const targetClass = item.getAttribute("data-target");
-    const targetSection = document.querySelector("." + targetClass);
+    const targetId = item.getAttribute("data-target");
+    const targetSection = document.getElementById(targetId);
 
     if (targetSection) {
       targetSection.scrollIntoView({
@@ -25,6 +25,7 @@ document.querySelectorAll(".contents-list li").forEach(item => {
     }
   });
 });
+
 
 // Skills dropdown toggle
 document.querySelectorAll(".dropdown").forEach(drop => {
