@@ -21,7 +21,7 @@ body {
 
 
 section {
-  padding: 80px 8%;
+  padding: 80px 20px;
 }
 
 
@@ -203,7 +203,7 @@ body {
 }
 
 section {
-  padding: 90px 8%;
+  padding: 90px 20px;
 }
 
 h1 { font-size: 6rem; font-weight: 900; }
@@ -964,8 +964,8 @@ body {
 }
 
 .cert-title {
-  font-size: 5rem;
-  font-weight: 900;
+  font-size: 3rem;
+  font-weight: 800;
   letter-spacing: 3px;
   margin-bottom: 50px;
 }
@@ -1191,7 +1191,9 @@ body {
 .contents img {
     display: none;
   }
-
+.cert-left img{
+    display: none;
+  }
   /* Contents fix */
   .contents-left {
   width: 100%;
@@ -1338,6 +1340,18 @@ body {
   }
 
   .projects-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+* {
+  max-width: 100%;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .cert-left {
     display: none;
   }
 }
