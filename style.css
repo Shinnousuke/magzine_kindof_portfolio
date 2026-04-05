@@ -32,7 +32,6 @@ h1, h2 {
 }
 .hero-cover {
   background: #111;
-  
   color: #fff;
   padding: 100px 8%;
   display: flex;
@@ -89,6 +88,14 @@ h1, h2 {
   margin-bottom: 40px;
   opacity: 0.8;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
 
 /* timeline row */
 .exp-timeline {
@@ -747,6 +754,10 @@ body {
 }
 /* ===== PROJECTS EDITORIAL (SCROLLABLE) ===== */
 
+
+
+
+
 .projects-editorial {
   padding: 100px 8%;
  background: #c9c39c;
@@ -797,6 +808,7 @@ body {
 /* RIGHT SIDE (SCROLLABLE COLUMN) */
 .projects-right {
   max-height: 520px;
+  overflow-x: auto;
   overflow-y: auto;
   padding-right: 12px;
 }
@@ -906,13 +918,10 @@ body {
 
 /* DROPDOWN STYLE */
 .cert-dropdowns {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  width: 90%;
   max-width: 600px;
-  margin: 0 auto;   /* 👈 centers it */
+  margin: 0 auto;
 }
-
 
 .cert-header {
   font-weight: 900;
@@ -1117,12 +1126,28 @@ body {
   height: 420px;
   object-fit: cover;
 }
+
+
+
+
+
+
 /* ============================= */
 /* ===== MOBILE RESPONSIVE ===== */
 /* ============================= */
 
 
 @media (max-width: 768px) {
+
+  .about-image {
+  height: auto !important;
+}
+
+.about-image img {
+  height: auto !important;
+  width: 100%;
+  object-fit: contain;
+}
 
   
   .hero {
@@ -1163,19 +1188,29 @@ body {
   .cover-meta .resume {
     font-size: 1.6rem;
   }
+.contents img {
+    display: none;
+  }
 
   /* Contents fix */
-  .contents-list {
-    columns: 1;
-  }
+  .contents-left {
+  width: 100%;
+}
 
-  .contents-left h2 {
-    font-size: 2rem;
-  }
+.contents-left h2 {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
 
-  .contents-list li {
-    font-size: 1rem;
-  }
+.contents-list {
+  columns: 1;
+}
+
+.contents-list li {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
 
   /* Education timeline vertical */
   .exp-timeline {
@@ -1193,7 +1228,9 @@ body {
   position: relative;
   top: auto;
 }
-
+.projects-right {
+  overflow-y: hidden;
+}
 .projects-right {
   display: flex;
   overflow-x: auto;
@@ -1303,38 +1340,4 @@ body {
   .projects-container::-webkit-scrollbar {
     display: none;
   }
-}
-@media (max-width: 768px) {
-
-  html {
-    scroll-snap-type: y mandatory;
-  }
-
-  section {
-    scroll-snap-align: start;
-  }
-
-  /* Full screen sections */
-  section:not(.hero-cover):not(.contents):not(#internships):not(#contact) {
-    min-height: 100svh;
-  }
-
-  /* Hero + Contents split */
-  .hero-cover {
-    min-height: 50svh;
-  }
-
-  .contents {
-    min-height: 50svh;
-  }
-
-  /* Internship + Contact split */
-  #internships {
-    min-height: 50svh;
-  }
-
-  #contact {
-    min-height: 50svh;
-  }
-
 }
