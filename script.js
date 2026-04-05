@@ -108,3 +108,5 @@ window.addEventListener("scroll", () => {
     clearInterval(autoScroll);
   });
 });
+
+
