@@ -538,7 +538,7 @@ progress {
 
 /* LEFT CONTENT */
 .hobbies-title {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: 3px;
   margin-bottom: 24px;
@@ -1138,7 +1138,27 @@ body {
 
 
 @media (max-width: 768px) {
-
+.hobbies-images {
+  display: flex;
+  overflow-x: auto;
+  gap: 14px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+.hobbies-images img {
+  min-width: 80%;
+  flex: 0 0 auto;
+  height: 220px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border-radius: 10px;
+}
+.hobbies-images::-webkit-scrollbar {
+  display: none;
+}
+.hobbies-images {
+  scroll-behavior: smooth;
+}
   .about-image {
   height: auto !important;
 }
