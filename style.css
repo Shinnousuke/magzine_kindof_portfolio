@@ -1208,9 +1208,7 @@ body {
   .cover-meta .resume {
     font-size: 1.6rem;
   }
-.contents img {
-    display: none;
-  }
+
 .cert-left img{
     display: none;
   }
@@ -1374,4 +1372,346 @@ html, body {
   .cert-left {
     display: none;
   }
+}/* ===== AUTO SCROLL PROJECTS (MOBILE ONLY) ===== */
+
+@media (max-width: 768px) {
+
+  .projects-right {
+    max-height: 420px;
+    overflow-y: hidden; /* JS will scroll */
+  }
+
+}
+/* ==============================
+   ACHIEVEMENTS SECTION FIX
+============================== */
+
+/* Full width on laptop */
+#achievements {
+  width: 100%;
+  max-width: none;
+}
+
+/* Prevent text from going outside */
+#achievements p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 📱 Phone layout */
+@media (max-width: 768px) {
+  #achievements {
+    padding: 40px 20px;
+  }
+}
+
+/* 💻 Laptop layout */
+@media (min-width: 1024px) {
+  #achievements {
+    padding: 100px 8%;
+  }
+}/* ======================
+   CONTACT SECTION
+====================== */
+
+.contact-section {
+  background: #000;   /* was white */
+  color: #fff;        /* text becomes white */
+  padding: 80px 8%;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+
+.contact-left h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.contact-email {
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.contact-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+
+
+.socials a {
+  background: white;
+  color: black;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+  background: #ddd;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+/* RIGHT SIDE FORM */
+
+.contact-form {
+  background: transparent;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #111;     /* dark input */
+  color: white;
+  font-size: 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+textarea {
+  height: 140px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e5e5e5;
+}
+/* links container */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* links */
+.contact-links a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  background: white;
+  color: black;
+}
+@media (max-width: 768px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+}
+/* SOCIAL ICONS */
+
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+.socials a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-decoration: none;
+
+  transition: all 0.35s ease;
+}
+
+/* ICON SIZE */
+.socials i {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+
+/* HOVER EFFECT */
+.socials a:hover {
+  background: white;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 18px rgba(255,255,255,0.4);
+}
+
+/* icon turns black on hover */
+.socials a:hover i {
+  stroke: black;
+}
+.socials i {
+  width: 22px;
+  height: 22px;
+
+  stroke: white !important;   /* ← forces icon color */
+  color: white !important;
+}
+
+/* SOCIAL ICONS */
+
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+/* circle */
+.socials a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background: white;          /* white circle */
+  border: 1px solid white;    /* default outline */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* icon (logo) */
+.socials i {
+  width: 20px;
+  height: 20px;
+  stroke: black !important;   /* black logo */
+}
+
+/* HOVER — ONLY outline changes */
+.socials a:hover {
+  border: 1px solid black;    /* outline becomes black */
+  transform: translateY(-3px);
+}
+/* ===== FINAL CONTACT SCREEN ===== */
+
+.contact-final {
+  height: 100vh;                 /* full screen */
+  background: #111;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 40px;
+}
+
+/* center container */
+.contact-center h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+/* big email */
+.main-email {
+  display: block;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.main-email:hover {
+  opacity: 1;
+}
+
+/* bottom links */
+.contact-nav {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+/* underline animation */
+.contact-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.contact-nav a:hover::after {
+  width: 100%;
 }
