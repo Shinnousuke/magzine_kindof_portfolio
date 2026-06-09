@@ -1722,3 +1722,17 @@ button:hover {
 .contact-nav a:hover::after {
   width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
