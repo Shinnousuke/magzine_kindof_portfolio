@@ -10,6 +10,13 @@ body {
 }
 
 section {
+  min-height: 100vh;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+}
+
+section {
   margin: 0;
   padding: 0;
 }
